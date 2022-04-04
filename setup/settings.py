@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-dyshm+=m=+9)^&i1oqkj1r3j^ewid)i7o$jou^bc!q9*c6rkns
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'CeleroDB',
+        'USER': 'postgres',
+        'PASSWORD': 'docker',
+        'HOST': 'celero_db',
+        'PORT': 5432,
     }
 }
 
