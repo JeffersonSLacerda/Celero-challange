@@ -1,7 +1,10 @@
-from django.http import JsonResponse
+from rest_framework import viewsets
+from olimpics.models import Atletic
+from olimpics.serializer import AtleticSerializer
 
-def atletic(request):
-  if request.method == 'GET':
-    atletic = {'id': 1, 'name': 'Jefferson', 'country': 'Brazil'}
-    
-    return JsonResponse(atletic)
+class AtleticViewSet(viewsets.ModelViewSet):
+  "Showing all atletics"
+  queryset = Atletic.objects.all()
+  serializer_class = AtleticSerializer
+  
+  
