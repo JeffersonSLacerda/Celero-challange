@@ -1,7 +1,7 @@
 from django.contrib import admin
-from olimpics.models import Atletic
+from olimpics.models import Athlete
 
-class Atletics(admin.ModelAdmin):
+class Athletes(admin.ModelAdmin):
   list_display = (
     'id',
     'name',
@@ -24,4 +24,4 @@ class Atletics(admin.ModelAdmin):
   search_fields = ('name',)
   list_per_page = 30
   
-admin.site.register(Atletic,  Atletics)
+admin.site.register(Athlete,  Athletes)

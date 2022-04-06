@@ -3,8 +3,8 @@ This project is a challange to work in a Celero Team
 
 List with all activites:
 
-[X] Create a Atletic model 
-[X] Make a CRUD to Atletics
+[X] Create a Athlete model 
+[X] Make a CRUD to Athletes
   [X] GET
   [X] POST
   [X] PATCH
@@ -12,7 +12,8 @@ List with all activites:
 [X] Implements a Postgres Database
 [X] Up application and database using Docker
   [X] Add portrainer to monitor logs and interage with individual containers
-[] Run a routine to populate database based on csv file
+[X] Run a routine to populate database based on csv file
+  [X] Improved performance by bulk insert
 
 [] Make some filters - need more details
 [] Create a superuser outside the container 

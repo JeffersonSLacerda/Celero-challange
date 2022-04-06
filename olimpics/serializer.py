@@ -1,11 +1,12 @@
 from rest_framework import serializers
-from olimpics.models import Atletic
+from olimpics.models import Athlete
 
-class AtleticSerializer(serializers.ModelSerializer):
+class AthleteSerializer(serializers.ModelSerializer):
   class Meta:
-    model = Atletic
+    model = Athlete
     fields = [
       'id',
+      'athlete_id',
       'name',
       'sex',
       'age',
